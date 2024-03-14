@@ -10,7 +10,7 @@ COPY . /code/
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build ./
 
 
-FROM debian:stretch
+FROM scratch
 
 COPY --from=builder /code/module-39 /usr/local/bin/module-39
 
