@@ -10,8 +10,8 @@ COPY . /code/
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build ./
 
 
-FROM scratch
-RUN mkdir -p /usr/local/bin/
+FROM debian:stretch
+
 COPY --from=builder /code/module-39 /usr/local/bin/module-39
 
 RUN chmod +x /usr/local/bin/module-39
