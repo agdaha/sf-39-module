@@ -8,7 +8,6 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-// comment for push
 func main() {
 	logrus.SetFormatter(&logrus.JSONFormatter{})
 
